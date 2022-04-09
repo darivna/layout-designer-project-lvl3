@@ -1,8 +1,21 @@
 @import "_variables.scss";
 
+body {
+    background-color: $primary;
+}
+
+p {
+    color: $success;
+}
+
+.container {
+    background-color: $danger;
+    
+}
+
 // Bootstrap
 
-@import "bootstrap/bootstrap-reboot.scss";
-@import "bootstrap/bootstrap-grid.scss";
-@import "bootstrap/utilities/_spacing.scss";
+// @import "bootstrap/bootstrap-reboot.scss";
+// @import "bootstrap/bootstrap-grid.scss";
+// @import "bootstrap/utilities/_spacing.scss";
 // @import "bootstrap/_mixins.scss";

@@ -6681,3 +6681,14 @@ html {
     margin-left: auto !important;
   }
 }
+body {
+  background-color: #007bff;
+}
+
+p {
+  color: #28a745;
+}
+
+.container {
+  background-color: #dc3545;
+}
