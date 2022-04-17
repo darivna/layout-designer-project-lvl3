@@ -1,31 +1,50 @@
 @charset "UTF-8";
-.contact-body {
+.contact-body,
+.chat-body {
   height: 93px;
 }
-.contact-body .avatar {
+.contact-body .avatar,
+.chat-body .avatar {
   width: 50px;
   height: 50px;
   margin-right: 1.5rem;
   border-radius: 100%;
 }
-.contact-body .name {
+.contact-body .name,
+.chat-body .name {
   color: #343A40;
 }
-.contact-body .status {
+.contact-body .status,
+.contact-body .message,
+.chat-body .status,
+.chat-body .message {
   color: #6C757D;
   font-size: 80%;
 }
-.contact-body:hover {
+.contact-body:hover,
+.chat-body:hover {
   background-color: #4545A5;
 }
-.contact-body:hover .name {
+.contact-body:hover .name,
+.chat-body:hover .name {
   color: #FBFBFB;
 }
-.contact-body:hover .status {
+.contact-body:hover .status,
+.contact-body:hover .message,
+.chat-body:hover .status,
+.chat-body:hover .message {
   color: #EFEFEF;
 }
 
+.chat-body {
+  padding-right: 2.5rem;
+}
+.chat-body .time {
+  justify-content: end;
+}
+
 html {
+  height: 100vh;
   font-size: 1rem;
 }
 
@@ -76,12 +95,6 @@ html {
   border-bottom: 1px solid #EFEFEF;
 }
 
-.hello-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .hello-section .hello-img {
   width: 200px;
   height: 200px;
@@ -91,6 +104,17 @@ html {
   font-size: 0, 875rem;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    border-radius: 0;
+  }
+  .header .navbar-nav {
+    column-gap: 2.5rem;
+  }
+  .header span {
+    display: none;
+  }
+}
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
