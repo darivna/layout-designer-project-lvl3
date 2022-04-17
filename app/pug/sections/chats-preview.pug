@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+
+        h2.section-title.text-dark.font-weight-bold Чаты
+        form.search-form
+            input.form-control.rounded-0.text-secondary.pl-4.shadow-none(type="search" placeholder="Поиск по сообщениям" aria-label="Search")
+
+        section#chats.chats
+                .chat-list.mt-5.w-100
+
+                    a.chat-item.text-decoration-none(href="#")
+                        .chat-body.d-flex.pl-3.shadow-sm.mb-3.align-items-center
+                            img.avatar(src="/assets/images/avatar_4.jpg")
+                            .info.py-4.text-truncate.flex-fill
+                                h6.name.font-weight-bold.mb-0 Вениамин Редакторович
+                                p.message.mb-0.text-truncate o_O
+                            p.time.text-secondary 11:45
+                    
+                    a.chat-item.text-decoration-none(href="#")
+                        .chat-body.d-flex.pl-3.shadow-sm.mb-3.align-items-center
+                            img.avatar(src="/assets/images/avatar_2.jpg")
+                            .info.py-4.text-truncate.flex-fill
+                                h6.name.font-weight-bold.mb-0 Джедай Падаванов
+                                p.message.mb-0.text-truncate   Привет, скоро третий проект? Уже скоро надо будет выложить
+                            p.time.text-secondary 10:12
+
+                    a.chat-item.text-decoration-none(href="#")
+                        .chat-body.d-flex.pl-3.shadow-sm.mb-3.align-items-center
+                            img.avatar(src="/assets/images/avatar_3.jpg")
+                            .info.py-4.text-truncate.flex-fill
+                                h6.name.font-weight-bold.mb-0 Алексей Примадонин
+                                p.message.mb-0.text-truncate Тесты упали &gt;_&lt;
+                            p.time.text-secondary 08:53
+                    
+

@@ -1,21 +1,97 @@
-@import "_variables.scss";
+@import "_contact-item.scss";
+@import "_chats-preview.scss";
 
-body {
-    background-color: $primary;
+html {
+    height: 100vh;
+
+    font-size: 1rem;
 }
 
-p {
-    color: $success;
+.app-container {
+    max-width: 1540px;
 }
 
-.container {
-    background-color: $danger;
-    
+.section-title {
+    margin-bottom: 1.563rem;
 }
 
-// Bootstrap
+.header {
+    height: 72px;
 
-// @import "bootstrap/bootstrap-reboot.scss";
-// @import "bootstrap/bootstrap-grid.scss";
-// @import "bootstrap/utilities/_spacing.scss";
-// @import "bootstrap/_mixins.scss";
+    border-radius: 1rem 0 0 0;
+
+        &-link {
+            padding: 0;
+
+            span {
+                font-size: 0.875rem;
+            }
+        }
+
+    &-logo {
+        width: 15px;
+        height: 25px;
+
+        padding-bottom: 4px;
+    }
+}
+
+.navbar-brand {
+    padding-left: 5px;
+}
+
+.navbar-nav {
+    column-gap: 14px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+
+    margin-right: 8px;
+
+    use {
+         fill: $white;
+    }
+}
+
+.search-form {
+    .form-control {
+        height: 47px;
+
+        border: none;
+        border-bottom: 1px solid $gray;
+    }
+}
+
+.hello-section {
+
+    .hello-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1.125rem;
+    }
+    p {
+        font-size: 0,875rem;
+    }
+}
+
+@media screen and(max-width: 768px) {
+    // .main {
+    //     flex-direction: column;
+    // }
+
+    .header {
+        // flex-direction: column-reverse;
+
+        border-radius: 0;
+
+        .navbar-nav {
+            column-gap: 2.5rem;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}

@@ -1,28 +1,46 @@
-
-$theme-colors:(
-  "gray": #EFEFEF
-);
+$primary:    #4545A5;
+$secondary:  #6C757D;
+$success:    #66b478;
+$info:       #17A2B8;
+$warning:    #FFC107;
+$danger:     #DC3545;
+$light:      #FBFBFB;
+$dark:       #343A40;
+$gray:       #EFEFEF;
+$body:       #E5E5E5;
+$white:      #FFFFFF;
 
 $theme-colors: (
   "primary":    #4545A5,
   "secondary":  #6C757D,
-  "success":    #28A745,
+  "success":    #66b478,
   "info":       #17A2B8,
   "warning":    #FFC107,
   "danger":     #DC3545,
   "light":      #FBFBFB,
-  "dark":       #343A40
+  "dark":       #343A40,
+  "gray":       #EFEFEF,
+  "body":       #E5E5E5,
+  "white":      #FFFFFF
 );
 
 $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
   xxl: 1600px
 );
 
 $container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
   xxl: 1540px
 );
 
 $border-radius: 1rem;
 
 $enable-shadows: true;
-

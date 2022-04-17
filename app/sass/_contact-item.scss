@@ -1,0 +1,42 @@
+.contact-body,
+.chat-body {
+    height: 93px;
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+
+        margin-right: 1.5rem;
+
+        border-radius: 100%;
+    }
+
+    .name {
+        color: $dark;
+    }
+    .status,
+    .message {
+        color: $secondary;
+        font-size: 80%;
+    }
+
+    &:hover {
+        background-color: $primary;
+
+        .name {
+            color: $light;
+        }
+        .status,
+        .message {
+            color: $gray;
+        }
+    }  
+}
+
+.chat-body {
+    padding-right: 2.5rem;
+
+    .time {
+        justify-content: end;
+    }
+}

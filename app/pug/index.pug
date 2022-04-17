@@ -6,6 +6,26 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
         link(rel="stylesheet" href="style/app.css")
-    body
-        .container-xxl.h-100.m-4
-            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti quaerat ducimus quam quidem tempore, totam delectus optio obcaecati labore debitis maxime iusto vitae laboriosam? Commodi excepturi velit animi fuga asperiores!
+    body.bg-body.vh-100.p-0.p-md-4
+            .app-container.container-fluid.w-100.h-100.px-0
+                main.main.bg-white.h-100.rounded
+                    .row
+                        .col-12.col-sm-12.col-md-4.pr-0
+
+                            include sections/header-desk.pug
+
+                            aside.left-side.border-right.border-gray.pt-5.px-4
+                                //- include sections/contacts.pug
+                                include sections/chats-preview.pug
+
+                        .col-sm-8.col-md-8.col-lg-8.col-xl-8.col-xxl-8.px-0
+
+                            aside.right-side.h-100
+                                section.hello-section.h-100.text-center.d-flex.flex-column.justify-content-center.align-items-center
+                                    img.hello-img.rounded-circle(src="../assets/images/avatar_1.jpg")
+                                    h6.text-dark.font-weight-bold Привет, Кодовёнок
+                                    p.text-secondary Выбери чат, чтобы начать общаться
+
+                        
+                
+          
