@@ -16,8 +16,8 @@
     }
     .status,
     .message {
+        font-size: 14px;
         color: $secondary;
-        font-size: 80%;
     }
 
     &:hover {
@@ -38,5 +38,7 @@
 
     .time {
         justify-content: end;
+
+        font-size: 0.875rem;
     }
 }

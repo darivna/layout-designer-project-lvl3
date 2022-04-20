@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chat-page
+        link(rel="stylesheet" href="style/app.css")
+
+    body.bg-body.vh-100.p-0.p-md-4
+        .app-container.container-fluid.w-100.h-100.px-0
+            main.main.bg-white.h-100.rounded
+                .row
+                    .col-12.col-sm-12.col-md-4.pr-0
+
+                        include sections/header-desk.pug
+
+                        aside.left-side.tab-content.border-right.border-gray.pt-5.px-4
+                            include sections/chats-preview.pug
+
+                    .col-sm-8.col-md-8.col-lg-8.col-xl-8.col-xxl-8.px-0
+                        aside.right-side.h-100
+                            section#current-chat.current-chat
+                            

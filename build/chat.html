@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-page</title>
+    <link rel="stylesheet" href="style/app.css">
+  </head>
+  <body class="bg-body vh-100 p-0 p-md-4">
+    <div class="app-container container-fluid w-100 h-100 px-0">
+      <main class="main bg-white h-100 rounded">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-4 pr-0">
+            <header class="header bg-primary">
+              <nav class="navbar pr-0 h-100"><a class="navbar-brand" href="#"><img class="header-logo" src="../assets/images/icons/logohex.svg"></a>
+                <ul class="nav nav-tabs" id="my-tab" role="tablist">
+                  <li class="nav-item" role="presentation"><a class="nav-link active" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true">
+                      <svg class="icon icon-people">
+                        <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#people"></use>
+                      </svg><span class="text-light small">Контакты</span></a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats" role="tab" aria-controls="chats" aria-selected="false">
+                      <svg class="icon icon-chat">
+                        <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#chat"></use>
+                      </svg><span class="text-light small">Сообщения</span></a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                      <svg class="icon icon-person">
+                        <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#person"></use>
+                      </svg><span class="text-light small">Профиль</span></a></li>
+                </ul>
+              </nav>
+            </header>
+            <aside class="left-side tab-content border-right border-gray pt-5 px-4">
+              <section class="chats tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab"> 
+                <h2 class="section-title text-dark font-weight-bold">Чаты
+                  <form class="search-form pb-5">
+                    <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
+                    <div class="chat-list mt-5 w-100"><a class="chat-item text-decoration-none" href="#">
+                        <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_4.jpg">
+                          <div class="info py-4 text-truncate flex-fill">
+                            <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
+                            <p class="message mb-0 small text-truncate">o_O</p>
+                          </div>
+                          <p class="time small text-secondary">11:45</p>
+                        </div></a><a class="chat-item text-decoration-none" href="#">
+                        <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_2.jpg">
+                          <div class="info py-4 text-truncate flex-fill">
+                            <h6 class="name font-weight-bold mb-0">Джедай Падаванов</h6>
+                            <p class="message mb-0 small text-truncate">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
+                          </div>
+                          <p class="time small text-secondary">10:12</p>
+                        </div></a><a class="chat-item text-decoration-none" href="#">
+                        <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_3.jpg">
+                          <div class="info py-4 text-truncate flex-fill">
+                            <h6 class="name font-weight-bold mb-0">Алексей Примадонин</h6>
+                            <p class="message mb-0 small text-truncate">Тесты упали &gt;_&lt;</p>
+                          </div>
+                          <p class="time small text-secondary">08:53</p>
+                        </div></a></div>
+                  </form>
+                </h2>
+              </section>
+            </aside>
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 px-0">
+            <aside class="right-side h-100">
+              <section class="current-chat" id="current-chat"></section>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -18,8 +18,8 @@
 .contact-body .message,
 .chat-body .status,
 .chat-body .message {
+  font-size: 14px;
   color: #6C757D;
-  font-size: 80%;
 }
 .contact-body:hover,
 .chat-body:hover {
@@ -41,6 +41,7 @@
 }
 .chat-body .time {
   justify-content: end;
+  font-size: 0.875rem;
 }
 
 html {
@@ -76,8 +77,8 @@ html {
   padding-left: 5px;
 }
 
-.navbar-nav {
-  column-gap: 14px;
+.nav-item {
+  margin-right: 1.625rem;
 }
 
 .icon {
@@ -93,6 +94,45 @@ html {
   height: 47px;
   border: none;
   border-bottom: 1px solid #EFEFEF;
+}
+
+.alphabet {
+  margin-bottom: 19px;
+}
+
+.profile-info {
+  margin-top: 22px;
+}
+.profile-info img {
+  width: 90px;
+  height: 90px;
+}
+
+.card {
+  margin-bottom: 59px;
+}
+.card-title {
+  margin-top: -4px;
+  padding-bottom: 4px;
+}
+
+.profile-link {
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.profile-link img {
+  width: 16px;
+  height: 16px;
+}
+
+.list-group-item {
+  height: 66px;
+}
+.list-group-item .list-text {
+  font-size: 12.8px;
+}
+.list-group-item .list-text .text-title {
+  margin-top: -1px;
 }
 
 .hello-section .hello-img {
@@ -4496,7 +4536,7 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0 0;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -4508,16 +4548,16 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: none solid none;
 }
 .nav-tabs .nav-link {
-  margin-bottom: -1px;
-  border: 1px solid transparent;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  margin-bottom: -none;
+  border: none solid transparent;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: none;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -4526,12 +4566,12 @@ input[type=button].btn-block {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #FFFFFF;
-  border-color: #dee2e6 #dee2e6 #FFFFFF;
+  color: none;
+  background-color: none;
+  border-color: none;
 }
 .nav-tabs .dropdown-menu {
-  margin-top: -1px;
+  margin-top: -none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4587,8 +4627,8 @@ input[type=button].btn-block {
 }
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: -0.1875rem;
+  padding-bottom: -0.1875rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -4616,8 +4656,8 @@ input[type=button].btn-block {
 
 .navbar-text {
   display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-collapse {
