@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat-page</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="style/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
   </head>
   <body class="bg-body vh-100 p-0 p-md-4">
     <div class="app-container container-fluid w-100 h-100 px-0">
@@ -64,7 +66,49 @@
           </div>
           <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 px-0">
             <aside class="right-side h-100">
-              <section class="current-chat" id="current-chat"></section>
+              <section class="header-chat w-100 position-sticky" id="header-chat">
+                <div class="contact-body d-flex pl-3 border-bottom border-gray"><img class="avatar align-self-center" src="/assets/images/avatar_4.jpg">
+                  <div class="info py-4 align-self-center">
+                    <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
+                    <p class="status mb-0 small">Онлайн</p>
+                  </div>
+                </div>
+              </section>
+              <section class="current-chat p-5 d-flex flex-column" id="current-chat">
+                <div class="message message-left d-flex mb-3"><img class="avatar mr-3 align-self-end" src="/assets/images/avatar_4.jpg">
+                  <div class="message-body p-4 shadow-sm bg-light">
+                    <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
+                    <p class="message-text text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
+                    <p class="message-time text-secondary mb-0">8 минут назад</p>
+                  </div>
+                </div>
+                <div class="message message-left d-flex flex-row-reverse mb-3 align-self-end"><img class="avatar ml-3 align-self-end" src="/assets/images/avatar_1.jpg">
+                  <div class="message-body p-4 shadow-sm bg-primary">
+                    <p class="message-text text-light pb-2 mb-1 border-bottom border-gray">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
+                    <p class="message-time text-gray mb-0">5 минут назад</p>
+                  </div>
+                </div>
+                <div class="message message-left d-flex mb-3"><img class="avatar mr-3 align-self-end" src="/assets/images/avatar_4.jpg">
+                  <div class="message-body p-4 shadow-sm bg-light">
+                    <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
+                    <p class="message-text text-secondary">Лады</p>
+                    <p class="message-time text-secondary mb-0">5 минут назад</p>
+                  </div>
+                </div>
+                <div class="message message-left d-flex flex-row-reverse mb-3 align-self-end"><img class="avatar ml-3 align-self-end" src="/assets/images/avatar_1.jpg">
+                  <div class="message-body p-4 shadow-sm bg-primary">
+                    <p class="message-text text-light pb-2 mb-1 border-bottom border-gray">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
+                    <p class="message-time text-gray mb-0">3 минут назад</p>
+                  </div>
+                </div>
+                <div class="message message-left d-flex mb-3"><img class="avatar mr-3 align-self-end" src="/assets/images/avatar_4.jpg">
+                  <div class="message-body p-4 shadow-sm bg-light">
+                    <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
+                    <p class="message-text text-secondary">о_О</p>
+                    <p class="message-time text-secondary mb-0">Только что</p>
+                  </div>
+                </div>
+              </section>
             </aside>
           </div>
         </div>

@@ -11,6 +11,25 @@ html {
     max-width: 1540px;
 }
 
+.avatar {
+    @extend %avatar;
+}
+
+.message {
+    min-width: min-content;
+    max-width: 624px;
+    
+    &-body {
+        border-radius: $border-radius;
+    }
+
+    &-text {
+        margin-bottom: 13px;
+    }
+}
+
+
+
 .section-title {
     margin-bottom: 1.563rem;
 }
@@ -101,7 +120,7 @@ html {
     height: 66px;
 
     .list-text {
-    font-size: 12.8px;
+        @extend %font-xs;
         
         .text-title {
             margin-top: -1px;
@@ -119,6 +138,10 @@ html {
     p {
         font-size: 0,875rem;
     }
+}
+
+.message-time {
+    @extend %font-xs;
 }
 
 @media screen and(max-width: 768px) {

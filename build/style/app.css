@@ -1,14 +1,22 @@
 @charset "UTF-8";
+.message-time, .list-group-item .list-text {
+  font-size: 12.8px;
+}
+
+.avatar, .contact-body .avatar,
+.chat-body .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
 .contact-body,
 .chat-body {
   height: 93px;
 }
 .contact-body .avatar,
 .chat-body .avatar {
-  width: 50px;
-  height: 50px;
   margin-right: 1.5rem;
-  border-radius: 100%;
 }
 .contact-body .name,
 .chat-body .name {
@@ -51,6 +59,17 @@ html {
 
 .app-container {
   max-width: 1540px;
+}
+
+.message {
+  min-width: min-content;
+  max-width: 624px;
+}
+.message-body {
+  border-radius: 1rem;
+}
+.message-text {
+  margin-bottom: 13px;
 }
 
 .section-title {
@@ -127,9 +146,6 @@ html {
 
 .list-group-item {
   height: 66px;
-}
-.list-group-item .list-text {
-  font-size: 12.8px;
 }
 .list-group-item .list-text .text-title {
   margin-top: -1px;
