@@ -9,38 +9,40 @@
     "В": [{
       name: "Вениамин Редакторович",
       status: "Онлайн",
-      avatar: "assets//images/avatar_4.jpg"
+      avatar: "assets/images/avatar_4.jpg"
     }],
 
     "Д": [{
       name: "Джедай Падаванов",
       status: "Был онлайн вчера",
-      avatar: "assets//images/avatar_2.jpg"
+      avatar: "assets/images/avatar_2.jpg"
     }],
 
     "К": [{
       name: "Кодовёнок Хекслетович",
       status: "Был онлайн 3 часа назад",
-      avatar: "assets//images/avatar_1.jpg"
+      avatar: "assets/images/avatar_1.jpg"
     },
     {
       name: "Королева Верстальщина",
       status: "Была онлайн вчера",
-      avatar: "assets//images/avatar_5.jpg"
+      avatar: "assets/images/avatar_5.jpg"
     }],
 
     "П": [{
       name: "Питонист Джангович",
       status: "Был онлайн вчера",
-      avatar: "assets//images/avatar_6.jpg"
+      avatar: "assets/images/avatar_6.jpg"
     }],
   }
 
-section#contacts.contacts.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="contacts-tab")
+section#contacts.contacts.px-4.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="contacts-tab")
+  .contacts-title.pt-5
     h2.section-title.text-dark.font-weight-bold Контакты
     form.search-form.pb-5
         input.form-control.rounded-0.text-secondary.pl-4.shadow-none(type="search" placeholder="Поиск по контактам" aria-label="Search")
 
+  .some.aside-t
     .contact-list
         each users, key in contacts
             .alphabet.text-muted

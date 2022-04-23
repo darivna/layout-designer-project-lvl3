@@ -53,7 +53,6 @@
 }
 
 html {
-  height: 100vh;
   font-size: 1rem;
 }
 
@@ -70,6 +69,11 @@ html {
 }
 .message-text {
   margin-bottom: 13px;
+}
+
+.button-message {
+  width: 50px;
+  height: 50px;
 }
 
 .section-title {
@@ -90,6 +94,9 @@ html {
   width: 15px;
   height: 25px;
   padding-bottom: 4px;
+}
+.header-chat {
+  pointer-events: none;
 }
 
 .navbar-brand {
@@ -151,6 +158,9 @@ html {
   margin-top: -1px;
 }
 
+.hello-section {
+  display: flex;
+}
 .hello-section .hello-img {
   width: 200px;
   height: 200px;
@@ -160,13 +170,44 @@ html {
   font-size: 0, 875rem;
 }
 
-@media screen and (max-width: 768px) {
+.row {
+  border-radius: 1rem;
+}
+
+.left-sidebar {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767.7px) {
+  .row {
+    border-radius: 0;
+  }
+
   .header {
     border-radius: 0;
   }
   .header .navbar-nav {
     column-gap: 2.5rem;
   }
+  .header span {
+    display: none;
+  }
+
+  .hello-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .header span {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .header span {
+    display: none;
+  }
+}
+@media screen and (max-width: 1339.98px) {
   .header span {
     display: none;
   }

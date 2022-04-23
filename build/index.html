@@ -9,19 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
   </head>
-  <body class="bg-body vh-100 p-0 p-md-4">
-    <div class="app-container container-fluid w-100 h-100 px-0">
-      <main class="main bg-white h-100 rounded">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-4 pr-0">
-            <header class="header bg-primary">
+  <body class="bg-body p-0 p-md-4 vh-100">
+    <div class="container-fluid app-container h-100 px-0">
+      <div class="row bg-white h-100 mx-0 px-0">
+        <div class="col-12 col-md-5 col-lg-4 p-0 border-right border-gray">
+          <div class="d-flex flex-column">
+            <header class="header bg-primary order-2 order-md-1 w-100">
               <nav class="navbar pr-0 h-100"><a class="navbar-brand" href="#"><img class="header-logo" src="../assets/images/icons/logohex.svg"></a>
                 <ul class="nav nav-tabs" id="my-tab" role="tablist">
                   <li class="nav-item" role="presentation"><a class="nav-link active" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true">
                       <svg class="icon icon-people">
                         <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#people"></use>
                       </svg><span class="text-light small">Контакты</span></a></li>
-                  <li class="nav-item" role="presentation"><a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats" role="tab" aria-controls="chats" aria-selected="false">
+                  <li class="nav-item"><a class="nav-link" href="chat.html">
                       <svg class="icon icon-chat">
                         <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#chat"></use>
                       </svg><span class="text-light small">Сообщения</span></a></li>
@@ -32,100 +32,77 @@
                 </ul>
               </nav>
             </header>
-            <aside class="left-side tab-content border-right border-gray pt-5 px-4">
-              <section class="chats tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab"> 
-                <h2 class="section-title text-dark font-weight-bold">Чаты
+            <aside class="left-sidebar tab-content order-1 order-md-2">
+              <section class="contacts px-4 tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                <div class="contacts-title pt-5">
+                  <h2 class="section-title text-dark font-weight-bold">Контакты</h2>
                   <form class="search-form pb-5">
-                    <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
-                    <div class="chat-list mt-5 w-100"><a class="chat-item text-decoration-none" href="#">
-                        <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_4.jpg">
-                          <div class="info py-4 text-truncate flex-fill">
-                            <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
-                            <p class="message mb-0 small text-truncate">o_O</p>
-                          </div>
-                          <p class="time small text-secondary">11:45</p>
-                        </div></a><a class="chat-item text-decoration-none" href="#">
-                        <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_2.jpg">
-                          <div class="info py-4 text-truncate flex-fill">
-                            <h6 class="name font-weight-bold mb-0">Джедай Падаванов</h6>
-                            <p class="message mb-0 small text-truncate">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
-                          </div>
-                          <p class="time small text-secondary">10:12</p>
-                        </div></a><a class="chat-item text-decoration-none" href="#">
-                        <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_3.jpg">
-                          <div class="info py-4 text-truncate flex-fill">
-                            <h6 class="name font-weight-bold mb-0">Алексей Примадонин</h6>
-                            <p class="message mb-0 small text-truncate">Тесты упали &gt;_&lt;</p>
-                          </div>
-                          <p class="time small text-secondary">08:53</p>
-                        </div></a></div>
+                    <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по контактам" aria-label="Search">
                   </form>
-                </h2>
-              </section>
-              <section class="contacts tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-                <h2 class="section-title text-dark font-weight-bold">Контакты</h2>
-                <form class="search-form pb-5">
-                  <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по контактам" aria-label="Search">
-                </form>
-                <div class="contact-list">
-                  <div class="alphabet text-muted">
-                    <h6 class="font-weight-normal">A</h6>
-                  </div><a class="contact-item text-decoration-none" href="#">
-                    <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_3.jpg">
-                      <div class="info py-4 align-self-center">
-                        <h6 class="name font-weight-bold mb-0">Алексей Примадонин</h6>
-                        <p class="status mb-0 small">Онлайн</p>
-                      </div>
-                    </div></a>
-                  <div class="alphabet text-muted">
-                    <h6 class="font-weight-normal">В</h6>
-                  </div><a class="contact-item text-decoration-none" href="#">
-                    <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets//images/avatar_4.jpg">
-                      <div class="info py-4 align-self-center">
-                        <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
-                        <p class="status mb-0 small">Онлайн</p>
-                      </div>
-                    </div></a>
-                  <div class="alphabet text-muted">
-                    <h6 class="font-weight-normal">Д</h6>
-                  </div><a class="contact-item text-decoration-none" href="#">
-                    <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets//images/avatar_2.jpg">
-                      <div class="info py-4 align-self-center">
-                        <h6 class="name font-weight-bold mb-0">Джедай Падаванов</h6>
-                        <p class="status mb-0 small">Был онлайн вчера</p>
-                      </div>
-                    </div></a>
-                  <div class="alphabet text-muted">
-                    <h6 class="font-weight-normal">К</h6>
-                  </div><a class="contact-item text-decoration-none" href="#">
-                    <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets//images/avatar_1.jpg">
-                      <div class="info py-4 align-self-center">
-                        <h6 class="name font-weight-bold mb-0">Кодовёнок Хекслетович</h6>
-                        <p class="status mb-0 small">Был онлайн 3 часа назад</p>
-                      </div>
-                    </div></a><a class="contact-item text-decoration-none" href="#">
-                    <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets//images/avatar_5.jpg">
-                      <div class="info py-4 align-self-center">
-                        <h6 class="name font-weight-bold mb-0">Королева Верстальщина</h6>
-                        <p class="status mb-0 small">Была онлайн вчера</p>
-                      </div>
-                    </div></a>
-                  <div class="alphabet text-muted">
-                    <h6 class="font-weight-normal">П</h6>
-                  </div><a class="contact-item text-decoration-none" href="#">
-                    <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets//images/avatar_6.jpg">
-                      <div class="info py-4 align-self-center">
-                        <h6 class="name font-weight-bold mb-0">Питонист Джангович</h6>
-                        <p class="status mb-0 small">Был онлайн вчера</p>
-                      </div>
-                    </div></a>
+                </div>
+                <div class="some aside-t">
+                  <div class="contact-list">
+                    <div class="alphabet text-muted">
+                      <h6 class="font-weight-normal">A</h6>
+                    </div><a class="contact-item text-decoration-none" href="#">
+                      <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_3.jpg">
+                        <div class="info py-4 align-self-center">
+                          <h6 class="name font-weight-bold mb-0">Алексей Примадонин</h6>
+                          <p class="status mb-0 small">Онлайн</p>
+                        </div>
+                      </div></a>
+                    <div class="alphabet text-muted">
+                      <h6 class="font-weight-normal">В</h6>
+                    </div><a class="contact-item text-decoration-none" href="#">
+                      <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_4.jpg">
+                        <div class="info py-4 align-self-center">
+                          <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
+                          <p class="status mb-0 small">Онлайн</p>
+                        </div>
+                      </div></a>
+                    <div class="alphabet text-muted">
+                      <h6 class="font-weight-normal">Д</h6>
+                    </div><a class="contact-item text-decoration-none" href="#">
+                      <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_2.jpg">
+                        <div class="info py-4 align-self-center">
+                          <h6 class="name font-weight-bold mb-0">Джедай Падаванов</h6>
+                          <p class="status mb-0 small">Был онлайн вчера</p>
+                        </div>
+                      </div></a>
+                    <div class="alphabet text-muted">
+                      <h6 class="font-weight-normal">К</h6>
+                    </div><a class="contact-item text-decoration-none" href="#">
+                      <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_1.jpg">
+                        <div class="info py-4 align-self-center">
+                          <h6 class="name font-weight-bold mb-0">Кодовёнок Хекслетович</h6>
+                          <p class="status mb-0 small">Был онлайн 3 часа назад</p>
+                        </div>
+                      </div></a><a class="contact-item text-decoration-none" href="#">
+                      <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_5.jpg">
+                        <div class="info py-4 align-self-center">
+                          <h6 class="name font-weight-bold mb-0">Королева Верстальщина</h6>
+                          <p class="status mb-0 small">Была онлайн вчера</p>
+                        </div>
+                      </div></a>
+                    <div class="alphabet text-muted">
+                      <h6 class="font-weight-normal">П</h6>
+                    </div><a class="contact-item text-decoration-none" href="#">
+                      <div class="contact-body d-flex pl-3 mb-5 shadow-sm"><img class="avatar align-self-center" src="assets/images/avatar_6.jpg">
+                        <div class="info py-4 align-self-center">
+                          <h6 class="name font-weight-bold mb-0">Питонист Джангович</h6>
+                          <p class="status mb-0 small">Был онлайн вчера</p>
+                        </div>
+                      </div></a>
+                  </div>
                 </div>
               </section>
-              <section class="profile tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> 
-                <h2 class="section-title text-dark font-weight-bold">Профиль</h2>
-                <form class="search-form pb-5">
-                  <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
-                </form>
+              <section class="profile tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="profile-title pt-5 px-4">
+                  <h2 class="section-title text-dark font-weight-bold">Профиль</h2>
+                  <form class="search-form pb-5">
+                    <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
+                  </form>
+                </div>
                 <div class="profile-info">
                   <div class="card border-0 align-items-center py-3"><img class="card-img-top rounded-circle" src="/assets/images/avatar_1.jpg" alt="profile-avatar">
                     <div class="card-body text-center"> 
@@ -165,16 +142,14 @@
               </section>
             </aside>
           </div>
-          <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 px-0">
-            <aside class="right-side h-100">
-              <section class="hello-section h-100 text-center d-flex flex-column justify-content-center align-items-center"><img class="hello-img rounded-circle" src="../assets/images/avatar_1.jpg">
-                <h6 class="text-dark font-weight-bold">Привет, Кодовёнок</h6>
-                <p class="text-secondary">Выбери чат, чтобы начать общаться</p>
-              </section>
-            </aside>
-          </div>
         </div>
-      </main>
+        <div class="col-auto px-0 flex-fill">
+          <section class="hello-section h-100 text-center flex-column justify-content-center align-items-center"><img class="hello-img rounded-circle" src="../assets/images/avatar_1.jpg">
+            <h6 class="text-dark font-weight-bold">Привет, Кодовёнок</h6>
+            <p class="text-secondary">Выбери чат, чтобы начать общаться</p>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>

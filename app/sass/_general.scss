@@ -2,8 +2,6 @@
 @import "_chats-preview.scss";
 
 html {
-    height: 100vh;
-
     font-size: 1rem;
 }
 
@@ -28,11 +26,15 @@ html {
     }
 }
 
-
+.button-message {
+    width: 50px;
+    height: 50px;
+}
 
 .section-title {
     margin-bottom: 1.563rem;
 }
+
 
 .header {
 
@@ -40,19 +42,23 @@ html {
 
     border-radius: 1rem 0 0 0;
 
-        &-link {
-            padding: 0;
+    &-link {
+        padding: 0;
 
-            span {
-                font-size: 0.875rem;
-            }
+        span {
+            font-size: 0.875rem;
         }
+    }
 
     &-logo {
         width: 15px;
         height: 25px;
 
         padding-bottom: 4px;
+    }
+
+    &-chat {
+        pointer-events: none;
     }
 }
 
@@ -129,6 +135,7 @@ html {
 }
 
 .hello-section {
+    display: flex;
 
     .hello-img {
         width: 200px;
@@ -144,13 +151,23 @@ html {
     @extend %font-xs;
 }
 
-@media screen and(max-width: 768px) {
-    // .main {
-    //     flex-direction: column;
-    // }
+//test
+
+.row {
+    border-radius: 1rem;
+}
+
+.left-sidebar {
+    overflow: hidden;
+}
+
+
+@media screen and(max-width: 767.7px) {
+    .row {
+        border-radius: 0;
+    }
 
     .header {
-        // flex-direction: column-reverse;
 
         border-radius: 0;
 
@@ -158,6 +175,34 @@ html {
             column-gap: 2.5rem;
         }
 
+        span {
+            display: none;
+        }
+    }
+
+    .hello-section {
+        display: none;
+    }
+}
+
+@media screen and(max-width: 991.98px) {
+    .header {
+        span {
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 1199.98px) {
+    .header {
+        span {
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 1339.98px) {
+    .header {
         span {
             display: none;
         }

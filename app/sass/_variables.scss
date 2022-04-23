@@ -69,3 +69,19 @@ $nav-tabs-link-active-border-color: none;
 
   border-radius: 100%;
 }
+
+// Mixins
+
+@mixin hide-scrollbar() {
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

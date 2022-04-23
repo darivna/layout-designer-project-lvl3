@@ -1,4 +1,4 @@
-header.header.bg-primary
+header.header.bg-primary.order-2.order-md-1.w-100
     nav.navbar.pr-0.h-100
         a.navbar-brand(href="#")
             img.header-logo(src="../assets/images/icons/logohex.svg")
@@ -10,8 +10,8 @@ header.header.bg-primary
                         use(xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#people")
                     span.text-light.small Контакты
 
-            li.nav-item(role="presentation")
-                a#chats-tab.nav-link(data-toggle="tab" href="#chats" role="tab" aria-controls="chats" aria-selected="false")
+            li.nav-item
+                a.nav-link(href="chat.html")
                     svg.icon.icon-chat
                         use(xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#chat")
                     span.text-light.small Сообщения

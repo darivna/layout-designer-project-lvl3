@@ -14,14 +14,14 @@
       <main class="main bg-white h-100 rounded">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-4 pr-0">
-            <header class="header bg-primary">
+            <header class="header bg-primary order-2 order-md-1 w-100">
               <nav class="navbar pr-0 h-100"><a class="navbar-brand" href="#"><img class="header-logo" src="../assets/images/icons/logohex.svg"></a>
                 <ul class="nav nav-tabs" id="my-tab" role="tablist">
                   <li class="nav-item" role="presentation"><a class="nav-link active" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true">
                       <svg class="icon icon-people">
                         <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#people"></use>
                       </svg><span class="text-light small">Контакты</span></a></li>
-                  <li class="nav-item" role="presentation"><a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats" role="tab" aria-controls="chats" aria-selected="false">
+                  <li class="nav-item"><a class="nav-link" href="chat.html">
                       <svg class="icon icon-chat">
                         <use xlink:href="../assets/images/sprite/svg/sprite.symbol.svg#chat"></use>
                       </svg><span class="text-light small">Сообщения</span></a></li>
@@ -33,7 +33,7 @@
               </nav>
             </header>
             <aside class="left-side tab-content border-right border-gray pt-5 px-4">
-              <section class="chats tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab"> 
+              <section class="chats" id="chats">
                 <h2 class="section-title text-dark font-weight-bold">Чаты
                   <form class="search-form pb-5">
                     <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
@@ -66,7 +66,7 @@
           </div>
           <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 px-0">
             <aside class="right-side h-100">
-              <section class="header-chat w-100 position-sticky" id="header-chat">
+              <section class="header-chat w-100 position-sticky sticky-top" id="header-chat">
                 <div class="contact-body d-flex pl-3 border-bottom border-gray"><img class="avatar align-self-center" src="/assets/images/avatar_4.jpg">
                   <div class="info py-4 align-self-center">
                     <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
@@ -106,6 +106,12 @@
                     <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
                     <p class="message-text text-secondary">о_О</p>
                     <p class="message-time text-secondary mb-0">Только что</p>
+                  </div>
+                </div>
+                <div class="input-group border-top border-gray align-items-center p-0 p-md-2 position-fixed fixed-bottom">
+                  <input class="form-control bg-transparent shadow-none border-0 rounded-0 text-secondary" type="text" placeholder="Напишите сообщение...">
+                  <div class="input-group-append">
+                    <button class="button-message btn btn-primary rounded-circle shadow-none" type="button"><img class="button-icon" src="/assets/images/icons/arrow_btn.svg"></button>
                   </div>
                 </div>
               </section>
