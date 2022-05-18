@@ -3,12 +3,9 @@
     height: 93px;
 
     .avatar {
-        width: 50px;
-        height: 50px;
+        @extend %avatar;
 
         margin-right: 1.5rem;
-
-        border-radius: 100%;
     }
 
     .name {
@@ -17,7 +14,6 @@
     .status,
     .message {
         color: $secondary;
-        font-size: 80%;
     }
 
     &:hover {
@@ -33,10 +29,14 @@
     }  
 }
 
-.chat-body {
-    padding-right: 2.5rem;
+.chat-item:hover {
+    background-color: $primary;
+}
 
-    .time {
-        justify-content: end;
-    }
+.chat-body {
+    
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

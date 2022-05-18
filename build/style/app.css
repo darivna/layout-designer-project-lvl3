@@ -1,14 +1,22 @@
 @charset "UTF-8";
+.message-time, .list-group-item .list-text {
+  font-size: 12.8px;
+}
+
+.avatar, .contact-body .avatar,
+.chat-body .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
 .contact-body,
 .chat-body {
   height: 93px;
 }
 .contact-body .avatar,
 .chat-body .avatar {
-  width: 50px;
-  height: 50px;
   margin-right: 1.5rem;
-  border-radius: 100%;
 }
 .contact-body .name,
 .chat-body .name {
@@ -19,7 +27,6 @@
 .chat-body .status,
 .chat-body .message {
   color: #6C757D;
-  font-size: 80%;
 }
 .contact-body:hover,
 .chat-body:hover {
@@ -36,20 +43,39 @@
   color: #EFEFEF;
 }
 
-.chat-body {
-  padding-right: 2.5rem;
+.chat-item:hover {
+  background-color: #4545A5;
 }
-.chat-body .time {
-  justify-content: end;
+
+.chat-body {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 html {
-  height: 100vh;
   font-size: 1rem;
 }
 
-.app-container {
-  max-width: 1540px;
+.row {
+  border-radius: 1rem;
+}
+
+.message {
+  min-width: min-content;
+  max-width: 624px;
+}
+.message-body {
+  border-radius: 1rem;
+}
+.message-text {
+  margin-bottom: 13px;
+}
+
+.button-message {
+  width: 50px;
+  height: 50px;
 }
 
 .section-title {
@@ -57,27 +83,15 @@ html {
 }
 
 .header {
-  height: 72px;
+  max-height: 72px;
   border-radius: 1rem 0 0 0;
 }
-.header-link {
-  padding: 0;
-}
-.header-link span {
-  font-size: 0.875rem;
-}
 .header-logo {
-  width: 15px;
+  width: 25px;
   height: 25px;
-  padding-bottom: 4px;
 }
-
-.navbar-brand {
-  padding-left: 5px;
-}
-
-.navbar-nav {
-  column-gap: 14px;
+.header-chat {
+  pointer-events: none;
 }
 
 .icon {
@@ -95,24 +109,90 @@ html {
   border-bottom: 1px solid #EFEFEF;
 }
 
+.alphabet {
+  margin-bottom: 19px;
+}
+
+.profile-info {
+  margin-top: 22px;
+}
+.profile-info img {
+  width: 90px;
+  height: 90px;
+}
+
+.card {
+  margin-bottom: 59px;
+}
+.card-title {
+  margin-top: -4px;
+  padding-bottom: 4px;
+}
+
+.profile-link {
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.profile-link img {
+  width: 16px;
+  height: 16px;
+}
+
+.list-group-item {
+  height: 66px;
+}
+.list-group-item .list-text .text-title {
+  margin-top: -1px;
+}
+
+.hello-section {
+  display: flex;
+  padding-top: 11px;
+}
 .hello-section .hello-img {
   width: 200px;
   height: 200px;
   margin-bottom: 1.125rem;
 }
-.hello-section p {
-  font-size: 0, 875rem;
+
+.contacts,
+.profile,
+.chats {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.contacts::-webkit-scrollbar,
+.profile::-webkit-scrollbar,
+.chats::-webkit-scrollbar {
+  display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.7px) {
+  .row {
+    border-radius: 0;
+  }
+
   .header {
     border-radius: 0;
   }
   .header .navbar-nav {
     column-gap: 2.5rem;
   }
+
+  .hello-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 1339.98px) {
   .header span {
     display: none;
+  }
+}
+@media screen and (min-width: 1339.98px) and (max-width: 1404px) {
+  .header-logo {
+    margin-right: 1rem;
   }
 }
 /*!
@@ -4508,16 +4588,16 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: none solid none;
 }
 .nav-tabs .nav-link {
-  margin-bottom: -1px;
-  border: 1px solid transparent;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  margin-bottom: -none;
+  border: none solid transparent;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: none;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -4526,12 +4606,12 @@ input[type=button].btn-block {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #FFFFFF;
-  border-color: #dee2e6 #dee2e6 #FFFFFF;
+  color: none;
+  background-color: none;
+  border-color: none;
 }
 .nav-tabs .dropdown-menu {
-  margin-top: -1px;
+  margin-top: -none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

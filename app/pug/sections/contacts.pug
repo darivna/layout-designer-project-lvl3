@@ -1,24 +1,56 @@
-doctype html
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body
+-
+  var contacts = {
+    "A": [{
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "assets/images/avatar_3.jpg"
+    }],
 
-        h2.section-title.text-dark.font-weight-bold Контакты
-        form.search-form
-            input.form-control.rounded-0.text-secondary.pl-4.shadow-none(type="search" placeholder="Поиск по контактам" aria-label="Search")
-        
-        section#contacts.contacts
-                .contact-list
-                    .alphabet.text-muted.pt-5
-                        h6.font-weight-normal А
+    "В": [{
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "assets/images/avatar_4.jpg"
+    }],
 
-                    a.contact-item.text-decoration-none(href="#")
-                        .contact-body.d-flex.pl-3.shadow-sm
-                            img.avatar.align-self-center(src="/assets/images/avatar_3.jpg")
-                            .info.py-4.align-self-center
-                                h6.name.font-weight-bold.mb-0 Алексей Примадонин
-                                p.status.mb-0 Онлайн
+    "Д": [{
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "assets/images/avatar_2.jpg"
+    }],
+
+    "К": [{
+      name: "Кодовёнок Хекслетович",
+      status: "Был онлайн 3 часа назад",
+      avatar: "assets/images/avatar_1.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "assets/images/avatar_5.jpg"
+    }],
+
+    "П": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "assets/images/avatar_6.jpg"
+    }],
+  }
+
+section#contacts.contacts.px-4.pt-5.h-100.tab-pane.active(role="tabpanel" aria-labelledby="contacts-tab")
+    h2.section-title.text-dark.font-weight-bold Контакты
+    form.search-form.pb-5
+        input.form-control.rounded-0.text-secondary.pl-4.shadow-none(type="search" placeholder="Поиск по контактам" aria-label="Search")
+  
+    each users, key in contacts
+        .alphabet.text-muted
+            h6.font-weight-normal #{key}
+
+        each user in users
+            a.contact-item.text-decoration-none(href="#")
+                .contact-body.d-flex.pl-3.mb-5.shadow-sm
+                    img.avatar.align-self-center(src=user.avatar)
+
+                    .info.py-4.align-self-center
+                        h6.name.font-weight-bold.mb-0 #{user.name}
+                        p.status.mb-0.small #{user.status}
+

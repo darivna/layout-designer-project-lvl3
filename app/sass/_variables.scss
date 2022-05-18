@@ -44,3 +44,44 @@ $container-max-widths: (
 $border-radius: 1rem;
 
 $enable-shadows: true;
+
+// Tabs
+// $nav-link-padding-y: 0;          
+// $nav-link-padding-x: 0;
+
+$nav-tabs-border-color: none;
+$nav-tabs-border-width: none;     
+$nav-tabs-border-radius: none;      
+$nav-tabs-link-hover-border-color: none;
+$nav-tabs-link-active-color: none;
+$nav-tabs-link-active-bg: none;
+$nav-tabs-link-active-border-color: none;
+
+//Font
+
+%font-xs {
+  font-size: 12.8px;
+}
+
+%avatar {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 100%;
+}
+
+// Mixins
+
+@mixin hide-scrollbar() {
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

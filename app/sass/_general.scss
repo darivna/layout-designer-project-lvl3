@@ -1,47 +1,53 @@
 @import "_contact-item.scss";
-@import "_chats-preview.scss";
 
 html {
-    height: 100vh;
-
     font-size: 1rem;
 }
 
-.app-container {
-    max-width: 1540px;
+.row {
+    border-radius: $border-radius;
+}
+
+.avatar {
+    @extend %avatar;
+}
+
+.message {
+    min-width: min-content;
+    max-width: 624px;
+    
+    &-body {
+        border-radius: $border-radius;
+    }
+
+    &-text {
+        margin-bottom: 13px;
+    }
+}
+
+.button-message {
+    width: 50px;
+    height: 50px;
 }
 
 .section-title {
     margin-bottom: 1.563rem;
 }
 
-.header {
-    height: 72px;
 
+.header {
+    max-height: 72px;
     border-radius: 1rem 0 0 0;
 
-        &-link {
-            padding: 0;
-
-            span {
-                font-size: 0.875rem;
-            }
-        }
-
     &-logo {
-        width: 15px;
+        width: 25px;
         height: 25px;
-
-        padding-bottom: 4px;
+        // margin-right: 38px;
     }
-}
 
-.navbar-brand {
-    padding-left: 5px;
-}
-
-.navbar-nav {
-    column-gap: 14px;
+    &-chat {
+        pointer-events: none;
+    }
 }
 
 .icon {
@@ -51,7 +57,7 @@ html {
     margin-right: 8px;
 
     use {
-         fill: $white;
+        fill: $white;
     }
 }
 
@@ -64,25 +70,81 @@ html {
     }
 }
 
+.alphabet {
+    margin-bottom: 19px;
+}
+
+.profile-info {
+    margin-top: 22px;
+    
+    img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+.card {
+    margin-bottom: 59px;
+
+    &-title {
+        margin-top: -4px;
+        padding-bottom: 4px;
+    }
+}
+
+.profile-link {
+    padding-left: 20px;
+    padding-right: 15px;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.list-group-item {
+    height: 66px;
+
+    .list-text {
+        @extend %font-xs;
+        
+        .text-title {
+            margin-top: -1px;
+        }
+    }
+}
+
 .hello-section {
+    display: flex;
+
+    padding-top: 11px;
 
     .hello-img {
         width: 200px;
         height: 200px;
         margin-bottom: 1.125rem;
     }
-    p {
-        font-size: 0,875rem;
-    }
 }
 
-@media screen and(max-width: 768px) {
-    // .main {
-    //     flex-direction: column;
-    // }
+.message-time {
+    @extend %font-xs;
+}
+
+//test
+
+.contacts,
+.profile,
+.chats {
+    @include hide-scrollbar;
+}
+
+
+@media screen and(max-width: 767.7px) {
+    .row {
+        border-radius: 0;
+    }
 
     .header {
-        // flex-direction: column-reverse;
 
         border-radius: 0;
 
@@ -90,8 +152,52 @@ html {
             column-gap: 2.5rem;
         }
 
+        // span {
+        //     display: none;
+        // }
+    }
+
+    .hello-section {
+        display: none;
+    }
+}
+
+// @media screen and(max-width: 991.98px) {
+//     .header {
+//         span {
+//             display: none;
+//         }
+//     }
+// }
+
+// @media screen and(max-width: 1199.98px) {
+//     .header {
+//         span {
+//             display: none;
+//         }
+//     }
+// }
+
+// @media screen and(max-width: 1339.98px) {
+//     .header {
+//         span {
+//             display: none;
+//         }
+//     }
+// }
+
+@media screen and(max-width: 1339.98px) {
+    .header {
         span {
             display: none;
+        }
+    }
+}
+
+@media screen and(min-width: 1339.98px) and (max-width: 1404px) {
+    .header {
+        &-logo {
+            margin-right: 1rem;
         }
     }
 }
