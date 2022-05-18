@@ -1,0 +1,40 @@
+section#current-chat.current-chat.p-5.d-flex.flex-column
+
+    .message.message-left.d-flex.mb-3
+        img.avatar.mr-3.align-self-end(src="/assets/images/avatar_4.jpg")
+        .message-body.p-4.shadow-sm.bg-light
+            h6.name.text-dark.font-weight-bold.mb-1 Вениамин Редакторович
+            p.message-text.text-secondary Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
+            p.message-time.text-secondary.mb-0 8 минут назад
+
+    .message.message-left.d-flex.flex-row-reverse.mb-3.align-self-end
+        img.avatar.ml-3.align-self-end(src="/assets/images/avatar_1.jpg")
+        .message-body.p-4.shadow-sm.bg-primary
+            p.message-text.text-light.pb-2.mb-1.border-bottom.border-gray Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень
+            p.message-time.text-gray.mb-0 5 минут назад
+    
+    .message.message-left.d-flex.mb-3
+        img.avatar.mr-3.align-self-end(src="/assets/images/avatar_4.jpg")
+        .message-body.p-4.shadow-sm.bg-light
+            h6.name.text-dark.font-weight-bold.mb-1 Вениамин Редакторович
+            p.message-text.text-secondary Лады
+            p.message-time.text-secondary.mb-0 5 минут назад
+
+    .message.message-left.d-flex.flex-row-reverse.mb-3.align-self-end
+        img.avatar.ml-3.align-self-end(src="/assets/images/avatar_1.jpg")
+        .message-body.p-4.shadow-sm.bg-primary
+            p.message-text.text-light.pb-2.mb-1.border-bottom.border-gray А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие
+            p.message-time.text-gray.mb-0 3 минут назад
+
+    .message.message-left.d-flex.mb-3
+        img.avatar.mr-3.align-self-end(src="/assets/images/avatar_4.jpg")
+        .message-body.p-4.shadow-sm.bg-light
+            h6.name.text-dark.font-weight-bold.mb-1 Вениамин Редакторович
+            p.message-text.text-secondary о_О
+            p.message-time.text-secondary.mb-0 Только что
+    
+    .input-group.border-top.border-gray.align-items-center.p-0.p-md-2.position-fixed.fixed-bottom
+        input.form-control.bg-transparent.shadow-none.border-0.rounded-0.text-secondary(type="text" placeholder="Напишите сообщение...")
+        .input-group-append
+            button.button-message.btn.btn-primary.rounded-circle.shadow-none(type="button")
+                img.button-icon(src="/assets/images/icons/arrow_btn.svg")

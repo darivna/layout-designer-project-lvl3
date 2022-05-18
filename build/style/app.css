@@ -26,6 +26,7 @@
 .contact-body .message,
 .chat-body .status,
 .chat-body .message {
+  font-size: 14px;
   color: #6C757D;
 }
 .contact-body:hover,
@@ -60,6 +61,22 @@ html {
 
 .row {
   border-radius: 1rem;
+}
+
+.message {
+  min-width: min-content;
+  max-width: 624px;
+}
+.message-body {
+  border-radius: 1rem;
+}
+.message-text {
+  margin-bottom: 13px;
+}
+
+.button-message {
+  width: 50px;
+  height: 50px;
 }
 
 .message {
@@ -182,6 +199,25 @@ html {
   }
 
   .hello-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 1339.98px) {
+  .header span {
+    display: none;
+  }
+
+  .hello-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .header span {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .header span {
     display: none;
   }
 }
@@ -4576,7 +4612,7 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0 0;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -4667,8 +4703,8 @@ input[type=button].btn-block {
 }
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: -0.1875rem;
+  padding-bottom: -0.1875rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -4696,8 +4732,8 @@ input[type=button].btn-block {
 
 .navbar-text {
   display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-collapse {
