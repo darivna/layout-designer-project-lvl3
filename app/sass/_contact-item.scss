@@ -11,8 +11,10 @@
     .name {
         color: $dark;
     }
+
     .status,
-    .message {
+    .message,
+    .user-message {
         font-size: 14px;
         color: $secondary;
     }
@@ -23,20 +25,16 @@
         .name {
             color: $light;
         }
+        
         .status,
-        .message {
+        .message,
+        .user-message {
             color: $gray;
         }
     }  
 }
 
+
 .chat-item:hover {
     background-color: $primary;
-}
-
-.chat-body {
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }

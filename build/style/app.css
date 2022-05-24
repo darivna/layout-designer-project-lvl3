@@ -24,8 +24,10 @@
 }
 .contact-body .status,
 .contact-body .message,
+.contact-body .user-message,
 .chat-body .status,
-.chat-body .message {
+.chat-body .message,
+.chat-body .user-message {
   font-size: 14px;
   color: #6C757D;
 }
@@ -39,20 +41,15 @@
 }
 .contact-body:hover .status,
 .contact-body:hover .message,
+.contact-body:hover .user-message,
 .chat-body:hover .status,
-.chat-body:hover .message {
+.chat-body:hover .message,
+.chat-body:hover .user-message {
   color: #EFEFEF;
 }
 
 .chat-item:hover {
   background-color: #4545A5;
-}
-
-.chat-body {
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 html {
@@ -61,38 +58,6 @@ html {
 
 .row {
   border-radius: 1rem;
-}
-
-.message {
-  min-width: min-content;
-  max-width: 624px;
-}
-.message-body {
-  border-radius: 1rem;
-}
-.message-text {
-  margin-bottom: 13px;
-}
-
-.button-message {
-  width: 50px;
-  height: 50px;
-}
-
-.message {
-  min-width: min-content;
-  max-width: 624px;
-}
-.message-body {
-  border-radius: 1rem;
-}
-.message-text {
-  margin-bottom: 13px;
-}
-
-.button-message {
-  width: 50px;
-  height: 50px;
 }
 
 .section-title {
@@ -172,9 +137,40 @@ html {
   margin-bottom: 1.125rem;
 }
 
+.message {
+  min-width: min-content;
+  max-width: 624px;
+}
+.message-body {
+  border-radius: 1rem;
+}
+.message-text {
+  margin-bottom: 13px;
+}
+
+.current-chat {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.current-chat-inputs {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.chat-input-button {
+  width: 50px;
+  height: 50px;
+}
+
+.chat-input {
+  outline: none;
+}
+
 .contacts,
 .profile,
-.chats {
+.chats,
+.current-chat {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: auto;
@@ -182,7 +178,8 @@ html {
 }
 .contacts::-webkit-scrollbar,
 .profile::-webkit-scrollbar,
-.chats::-webkit-scrollbar {
+.chats::-webkit-scrollbar,
+.current-chat::-webkit-scrollbar {
   display: none;
 }
 
@@ -201,24 +198,10 @@ html {
   .hello-section {
     display: none;
   }
-}
-@media screen and (max-width: 1339.98px) {
-  .header span {
-    display: none;
-  }
 
-  .hello-section {
-    display: none;
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .header span {
-    display: none;
-  }
-}
-@media screen and (max-width: 1199.98px) {
-  .header span {
-    display: none;
+  .current-chat {
+    border-radius: 0;
+    order: 1;
   }
 }
 @media screen and (max-width: 1339.98px) {
@@ -4612,7 +4595,7 @@ input[type=button].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0 0;
+  padding: 0.5rem 1rem;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -4703,8 +4686,8 @@ input[type=button].btn-block {
 }
 .navbar-brand {
   display: inline-block;
-  padding-top: -0.1875rem;
-  padding-bottom: -0.1875rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -4732,8 +4715,8 @@ input[type=button].btn-block {
 
 .navbar-text {
   display: inline-block;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-collapse {

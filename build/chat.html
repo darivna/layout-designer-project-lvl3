@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="h-100" lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вениамин Редакторович - Hexlet Chat</title>
+    <title>Hexlet chat</title>
     <link rel="stylesheet" href="style/app.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
   <body class="h-100 p-md-4 bg-body"> 
     <div class="container-fluid container-xxl h-100">
       <div class="row h-100 bg-white"> 
-        <div class="col col-md-4 h-100 tab-content px-0 d-flex flex-column flex-column-reverse flex-md-column border-right border-gray overflow-hidden">
+        <div class="col col-md-4 h-100 tab-content px-0 d-flex flex-column flex-column-reverse flex-md-column border-right border-gray">
           <header class="header bg-primary p-3 d-flex align-items-center"><a class="logo flex-grow-1" href="#"><img class="header-logo" src="../assets/images/icons/logohex.svg"></a>
             <nav class="flex-grow-2">
               <ul class="nav nav-tabs flex-nowrap" role="tablist">
@@ -96,29 +96,28 @@
             <h2 class="section-title text-dark font-weight-bold">Чаты</h2>
             <form class="search-form pb-5">
               <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
-            </form>
-            <div class="chat-list"><a class="chat-item text-decoration-none mb-3 px-3 d-flex align-items-center shadow-sm position-relative" href="#chat.html"><img class="avatar" src="/assets/images/avatar_4.jpg">
-                <div class="chat-body w-100 p-4 overflow-hidden">
-                  <div class="chat-title d-flex">
-                    <h6 class="name font-weight-bold mb-0 text-truncate">Вениамин Редакторович</h6>
-                    <p class="time small text-secondary mb-0 ml-auto">11:45</p>
-                  </div>
-                  <p class="message m-0 small">o_O Привет, скоро третий проект? Уже скоро надо будет выложить</p>
-                </div></a><a class="chat-item text-decoration-none mb-3 px-3 d-flex align-items-center shadow-sm position-relative" href="#"><img class="avatar" src="/assets/images/avatar_2.jpg">
-                <div class="chat-body w-100 p-4">
-                  <div class="chat-title d-flex">
-                    <h6 class="name font-weight-bold mb-0 text-truncate">Джедай Падаванов</h6>
-                    <p class="time small text-secondary mb-0 ml-auto">10:12</p>
-                  </div>
-                  <p class="message m-0 small text-truncate">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
-                </div></a><a class="chat-item text-decoration-none mb-3 px-3 d-flex align-items-center shadow-sm position-relative" href="#"><img class="avatar" src="/assets/images/avatar_3.jpg">
-                <div class="chat-body w-100 p-4 overflow-hidden">
-                  <div class="chat-title d-flex">
-                    <h6 class="name font-weight-bold mb-0 text-truncate">Алексей Примадонин</h6>
-                    <p class="time small text-secondary mb-0 ml-auto">08:53</p>
-                  </div>
-                  <p class="message m-0 small">Тесты упали &gt;_&lt;                        </p>
-                </div></a></div>
+            </form><a class="chat-item text-decoration-none mb-3 px-3 d-flex align-items-center shadow-sm" href="#chat.html"><img class="avatar" src="/assets/images/avatar_4.jpg">
+              <div class="chat-body w-100 p-4 overflow-hidden">
+                <div class="chat-title d-flex">
+                  <h6 class="name font-weight-bold mb-0 text-truncate">Вениамин Редакторович</h6>
+                  <p class="time small text-secondary mb-0 ml-auto">11:45</p>
+                </div>
+                <p class="user-message m-0 small text-truncate">o_O</p>
+              </div></a><a class="chat-item text-decoration-none mb-3 px-3 d-flex align-items-center shadow-sm" href="#"><img class="avatar" src="/assets/images/avatar_2.jpg">
+              <div class="chat-body w-100 p-4 overflow-hidden">
+                <div class="chat-title d-flex">
+                  <h6 class="name font-weight-bold mb-0 text-truncate">Джедай Падаванов</h6>
+                  <p class="time small text-secondary mb-0 ml-auto">10:12</p>
+                </div>
+                <p class="user-message m-0 small text-truncate">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
+              </div></a><a class="chat-item text-decoration-none mb-3 px-3 d-flex align-items-center shadow-sm" href="#"><img class="avatar" src="/assets/images/avatar_3.jpg">
+              <div class="chat-body w-100 p-4 overflow-hidden">
+                <div class="chat-title d-flex">
+                  <h6 class="name font-weight-bold mb-0 text-truncate">Алексей Примадонин</h6>
+                  <p class="time small text-secondary mb-0 ml-auto">08:53</p>
+                </div>
+                <p class="user-message m-0 small text-truncate">Тесты упали &gt;_&lt;</p>
+              </div></a>
           </section>
           <section class="profile pt-5 px-4 h-100 tab-pane fade hide-scrollbar" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="profile-title">
@@ -165,82 +164,56 @@
             </div>
           </section>
         </div>
-        <div class="col h-100 p-0">
-          <section class="header-chat w-100 position-sticky sticky-top" id="header-chat">
-            <div class="contact-body d-flex pl-3 border-bottom border-gray"><img class="avatar align-self-center" src="/assets/images/avatar_4.jpg">
-              <div class="info py-4 align-self-center">
-                <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
-                <p class="status mb-0 small">Онлайн</p>
+        <div class="col h-100 d-flex p-0">
+          <section class="current-chat w-100 h-100 bg-white" id="current-chat">
+            <div class="current-chat-header border-bottom border-gray sticky-top">
+              <div class="contact-body bg-white shadow-none d-flex align-items-center pl-3"><img class="avatar align-self-center" src="/assets/images/avatar_4.jpg">
+                <div class="contact-info">
+                  <h6 class="contact-name font-weight-bold mb-0 text-dark">Вениамин Редакторович</h6>
+                  <p class="contact-status mb-0 small text-secondary">Онлайн</p>
+                </div>
               </div>
             </div>
-          </section>
-          <section class="chats order-1 order-md-2 tab-pane fade active pt-5 px-4 h-100" id="chats" role="tabpnel" aria-labelledby="chats-tab">
-            <h2 class="section-title text-dark font-weight-bold">Чаты</h2>
-            <form class="search-form pb-5">
-              <input class="form-control rounded-0 text-secondary pl-4 shadow-none" type="search" placeholder="Поиск по сообщениям" aria-label="Search">
-            </form>
-            <div class="chat-list"><a class="chat-item text-decoration-none" href="#chat.html">
-                <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_4.jpg">
-                  <div class="info py-4 text-truncate flex-fill">
-                    <h6 class="name font-weight-bold mb-0">Вениамин Редакторович</h6>
-                    <p class="message mb-0 small text-truncate">o_O</p>
-                  </div>
-                  <p class="time small text-secondary">11:45</p>
-                </div></a><a class="chat-item text-decoration-none" href="#">
-                <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_2.jpg">
-                  <div class="info py-4 text-truncate flex-fill">
-                    <h6 class="name font-weight-bold mb-0">Джедай Падаванов</h6>
-                    <p class="message mb-0 small text-truncate">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
-                  </div>
-                  <p class="time small text-secondary">10:12</p>
-                </div></a><a class="chat-item text-decoration-none" href="#">
-                <div class="chat-body d-flex pl-3 shadow-sm mb-3 align-items-center"><img class="avatar" src="/assets/images/avatar_3.jpg">
-                  <div class="info py-4 text-truncate flex-fill">
-                    <h6 class="name font-weight-bold mb-0">Алексей Примадонин</h6>
-                    <p class="message mb-0 small text-truncate">Тесты упали &gt;_&lt;</p>
-                  </div>
-                  <p class="time small text-secondary">08:53</p>
-                </div></a></div>
-          </section>
-          <section class="current-chat p-5 d-flex flex-column" id="current-chat">
-            <div class="message message-left d-flex mb-3"><img class="avatar mr-3 align-self-end" src="/assets/images/avatar_4.jpg">
-              <div class="message-body p-4 shadow-sm bg-light">
-                <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
-                <p class="message-text text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
-                <p class="message-time text-secondary mb-0">8 минут назад</p>
+            <div class="p-5">
+              <div class="message message-left d-flex align-items-end w-100 mb-3"><img class="avatar d-none d-md-block mr-3" src="/assets/images/avatar_4.jpg">
+                <div class="message-body shadow-sm bg-light p-4">
+                  <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
+                  <p class="message-text text-secondary pb-2 mb-1 border-bottom border-gray">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
+                  <p class="message-time text-secondary mb-0">8 минут назад</p>
+                </div>
+              </div>
+              <div class="message message-right d-flex align-items-end w-100 ml-auto mb-3"><img class="avatar d-none d-md-block mr-3" src="/assets/images/avatar_1.jpg">
+                <div class="message-body shadow-sm bg-primary p-4">
+                  <p class="message-text text-light pb-2 mb-1 border-bottom border-gray">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
+                  <p class="message-time text-gray mb-0">5 минут назад</p>
+                </div>
+              </div>
+              <div class="message message-left d-flex align-items-end w-100 mb-3"><img class="avatar d-none d-md-block mr-3" src="/assets/images/avatar_4.jpg">
+                <div class="message-body shadow-sm bg-light p-4">
+                  <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
+                  <p class="message-text text-secondary pb-2 mb-1 border-bottom border-gray">Лады</p>
+                  <p class="message-time text-secondary mb-0">5 минут назад</p>
+                </div>
+              </div>
+              <div class="message message-right d-flex align-items-end w-100 ml-auto mb-3"><img class="avatar d-none d-md-block mr-3" src="/assets/images/avatar_1.jpg">
+                <div class="message-body shadow-sm bg-primary p-4">
+                  <p class="message-text text-light pb-2 mb-1 border-bottom border-gray">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
+                  <p class="message-time text-gray mb-0">3 минут назад</p>
+                </div>
+              </div>
+              <div class="message message-left d-flex align-items-end w-100 mb-2"><img class="avatar d-none d-md-block mr-3" src="/assets/images/avatar_4.jpg">
+                <div class="message-body shadow-sm bg-light p-4">
+                  <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
+                  <p class="message-text text-secondary pb-2 mb-1 border-bottom border-gray">о_О</p>
+                  <p class="message-time text-secondary mb-0">Только что</p>
+                </div>
               </div>
             </div>
-            <div class="message message-left d-flex flex-row-reverse mb-3 align-self-end"><img class="avatar ml-3 align-self-end" src="/assets/images/avatar_1.jpg">
-              <div class="message-body p-4 shadow-sm bg-primary">
-                <p class="message-text text-light pb-2 mb-1 border-bottom border-gray">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
-                <p class="message-time text-gray mb-0">5 минут назад</p>
-              </div>
-            </div>
-            <div class="message message-left d-flex mb-3"><img class="avatar mr-3 align-self-end" src="/assets/images/avatar_4.jpg">
-              <div class="message-body p-4 shadow-sm bg-light">
-                <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
-                <p class="message-text text-secondary">Лады</p>
-                <p class="message-time text-secondary mb-0">5 минут назад</p>
-              </div>
-            </div>
-            <div class="message message-left d-flex flex-row-reverse mb-3 align-self-end"><img class="avatar ml-3 align-self-end" src="/assets/images/avatar_1.jpg">
-              <div class="message-body p-4 shadow-sm bg-primary">
-                <p class="message-text text-light pb-2 mb-1 border-bottom border-gray">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
-                <p class="message-time text-gray mb-0">3 минут назад</p>
-              </div>
-            </div>
-            <div class="message message-left d-flex mb-3"><img class="avatar mr-3 align-self-end" src="/assets/images/avatar_4.jpg">
-              <div class="message-body p-4 shadow-sm bg-light">
-                <h6 class="name text-dark font-weight-bold mb-1">Вениамин Редакторович</h6>
-                <p class="message-text text-secondary">о_О</p>
-                <p class="message-time text-secondary mb-0">Только что</p>
-              </div>
-            </div>
-            <div class="input-group border-top border-gray align-items-center p-0 p-md-2 position-fixed fixed-bottom">
-              <input class="form-control bg-transparent shadow-none border-0 rounded-0 text-secondary" type="text" placeholder="Напишите сообщение...">
-              <div class="input-group-append">
-                <button class="button-message btn btn-primary rounded-circle shadow-none" type="button"><img class="button-icon" src="/assets/images/icons/arrow_btn.svg"></button>
-              </div>
+            <div class="current-chat-inputs border-top border-gray p-0 px-3 p-md-2 mx-md-5 bg-white">
+              <form class="d-flex align-items-center justify-content-between">
+                <input class="chat-input text-secondary border-0 py-4 flex-grow-1" type="text" placeholder="Напишите сообщение...">
+                <button class="chat-input-button btn btn-primary rounded-circle"> <img class="button-icon" src="/assets/images/icons/arrow_btn.svg"></button>
+              </form>
             </div>
           </section>
         </div>

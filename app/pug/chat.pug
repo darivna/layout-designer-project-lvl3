@@ -1,24 +1,23 @@
 doctype html
-html(lang="ru")
+html.h-100(lang="ru")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Вениамин Редакторович - Hexlet Chat
+        title Hexlet chat
         link(rel="stylesheet" href="style/app.css")
         
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous")
-    
+
     body.h-100.p-md-4.bg-body 
         .container-fluid.container-xxl.h-100
             .row.h-100.bg-white 
-                .col.col-md-4.h-100.tab-content.px-0.d-flex.flex-column.flex-column-reverse.flex-md-column.border-right.border-gray.overflow-hidden
+                .col.col-md-4.h-100.tab-content.px-0.d-flex.flex-column.flex-column-reverse.flex-md-column.border-right.border-gray
                     include sections/header.pug
                     include sections/contacts.pug
                     include sections/chats-preview.pug
                     include sections/profile.pug
 
-                .col.h-100.p-0
-                    include sections/chat-header.pug
+                .col.h-100.d-flex.p-0
                     include sections/current-chat.pug

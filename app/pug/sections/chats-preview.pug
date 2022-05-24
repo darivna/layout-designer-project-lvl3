@@ -2,54 +2,27 @@ section#chats.chats.order-1.order-md-2.tab-pane.fade.pt-5.px-4.h-100(role="tabpn
     h2.section-title.text-dark.font-weight-bold Чаты
     form.search-form.pb-5
         input.form-control.rounded-0.text-secondary.pl-4.shadow-none(type="search" placeholder="Поиск по сообщениям" aria-label="Search")
-
-    .chat-list
-        //- a.chat-item.text-decoration-none(href="#chat.html")
-        //-     .chat-body.d-flex.pl-3.shadow-sm.mb-3.align-items-center
-        //-         img.avatar(src="/assets/images/avatar_4.jpg")
-        //-         .chat-title.d-flex.py-4.w-100
-        //-             h6.name.font-weight-bold.mb-0 Вениамин Редакторович
-        //-             p.time.small.text-secondary 11:45
-        //-         p.message.mb-0.small.text-truncate o_O
+    
+    a.chat-item.text-decoration-none.mb-3.px-3.d-flex.align-items-center.shadow-sm(href="#chat.html")
+        img.avatar(src="/assets/images/avatar_4.jpg")
+        .chat-body.w-100.p-4.overflow-hidden
+            .chat-title.d-flex
+                h6.name.font-weight-bold.mb-0.text-truncate Вениамин Редакторович
+                p.time.small.text-secondary.mb-0.ml-auto 11:45
+            p.user-message.m-0.small.text-truncate o_O
+        
+    a.chat-item.text-decoration-none.mb-3.px-3.d-flex.align-items-center.shadow-sm(href="#")
+        img.avatar(src="/assets/images/avatar_2.jpg")
+        .chat-body.w-100.p-4.overflow-hidden
+            .chat-title.d-flex
+                h6.name.font-weight-bold.mb-0.text-truncate Джедай Падаванов
+                p.time.small.text-secondary.mb-0.ml-auto 10:12
+            p.user-message.m-0.small.text-truncate Привет, скоро третий проект? Уже скоро надо будет выложить
             
-        //- a.chat-item.text-decoration-none(href="#")
-        //-     .chat-body.d-flex.pl-3.shadow-sm.mb-3.align-items-center.overflow-hidden.flex-wrap
-        //-         img.avatar(src="/assets/images/avatar_2.jpg")
-        //-         .chat-title.d-flex.py-4.flex-fill
-        //-             h6.name.font-weight-bold.mb-0 Джедай Падаванов
-        //-             p.time.small.text-secondary 10:12
-        //-         p.message.mb-0.small.text-truncate Привет, скоро третий проект? Уже скоро надо будет выложить
-                
-
-        //- a.chat-item.text-decoration-none(href="#")
-        //-     .chat-body.d-flex.pl-3.shadow-sm.mb-3.align-items-center.overflow-hidden
-        //-         img.avatar(src="/assets/images/avatar_3.jpg")
-        //-         .chat-title.d-flex.py-4.flex-fill
-        //-             h6.name.font-weight-bold.mb-0 Алексей Примадонин
-        //-             p.time.small.text-secondary 08:53
-        //-         p.message.mb-0.small Тесты упали &gt;_&lt;
-               
-        a.chat-item.text-decoration-none.mb-3.px-3.d-flex.align-items-center.shadow-sm.position-relative(href="#chat.html")
-            img.avatar(src="/assets/images/avatar_4.jpg")
-            .chat-body.w-100.p-4.overflow-hidden
-                .chat-title.d-flex
-                    h6.name.font-weight-bold.mb-0.text-truncate Вениамин Редакторович
-                    p.time.small.text-secondary.mb-0.ml-auto 11:45
-                p.message.m-0.small o_O Привет, скоро третий проект? Уже скоро надо будет выложить
-            
-        a.chat-item.text-decoration-none.mb-3.px-3.d-flex.align-items-center.shadow-sm.position-relative(href="#")
-            img.avatar(src="/assets/images/avatar_2.jpg")
-            .chat-body.w-100.p-4
-                .chat-title.d-flex
-                    h6.name.font-weight-bold.mb-0.text-truncate Джедай Падаванов
-                    p.time.small.text-secondary.mb-0.ml-auto 10:12
-                p.message.m-0.small.text-truncate Привет, скоро третий проект? Уже скоро надо будет выложить
-                
-
-        a.chat-item.text-decoration-none.mb-3.px-3.d-flex.align-items-center.shadow-sm.position-relative(href="#")
-            img.avatar(src="/assets/images/avatar_3.jpg")
-            .chat-body.w-100.p-4.overflow-hidden
-                .chat-title.d-flex
-                    h6.name.font-weight-bold.mb-0.text-truncate Алексей Примадонин
-                    p.time.small.text-secondary.mb-0.ml-auto 08:53
-                p.message.m-0.small Тесты упали &gt;_&lt;                        
+    a.chat-item.text-decoration-none.mb-3.px-3.d-flex.align-items-center.shadow-sm(href="#")
+        img.avatar(src="/assets/images/avatar_3.jpg")
+        .chat-body.w-100.p-4.overflow-hidden
+            .chat-title.d-flex
+                h6.name.font-weight-bold.mb-0.text-truncate Алексей Примадонин
+                p.time.small.text-secondary.mb-0.ml-auto 08:53
+            p.user-message.m-0.small.text-truncate Тесты упали &gt;_&lt;
