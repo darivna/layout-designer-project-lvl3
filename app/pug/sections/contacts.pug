@@ -36,24 +36,21 @@
     }],
   }
 
-section#contacts.contacts.px-4.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="contacts-tab")
-  .contacts-title.pt-5
+section#contacts.contacts.px-4.pt-5.h-100.tab-pane.active(role="tabpanel" aria-labelledby="contacts-tab")
     h2.section-title.text-dark.font-weight-bold Контакты
     form.search-form.pb-5
         input.form-control.rounded-0.text-secondary.pl-4.shadow-none(type="search" placeholder="Поиск по контактам" aria-label="Search")
+  
+    each users, key in contacts
+        .alphabet.text-muted
+            h6.font-weight-normal #{key}
 
-  .some.aside-t
-    .contact-list
-        each users, key in contacts
-            .alphabet.text-muted
-                h6.font-weight-normal #{key}
+        each user in users
+            a.contact-item.text-decoration-none(href="#")
+                .contact-body.d-flex.pl-3.mb-5.shadow-sm
+                    img.avatar.align-self-center(src=user.avatar)
 
-            each user in users
-                a.contact-item.text-decoration-none(href="#")
-                    .contact-body.d-flex.pl-3.mb-5.shadow-sm
-                        img.avatar.align-self-center(src=user.avatar)
-
-                        .info.py-4.align-self-center
-                            h6.name.font-weight-bold.mb-0 #{user.name}
-                            p.status.mb-0.small #{user.status}
+                    .info.py-4.align-self-center
+                        h6.name.font-weight-bold.mb-0 #{user.name}
+                        p.status.mb-0.small #{user.status}
 

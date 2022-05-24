@@ -1,12 +1,33 @@
 @import "_contact-item.scss";
-@import "_chats-preview.scss";
 
 html {
     font-size: 1rem;
 }
 
-.app-container {
-    max-width: 1540px;
+.row {
+    border-radius: $border-radius;
+}
+
+.avatar {
+    @extend %avatar;
+}
+
+.message {
+    min-width: min-content;
+    max-width: 624px;
+    
+    &-body {
+        border-radius: $border-radius;
+    }
+
+    &-text {
+        margin-bottom: 13px;
+    }
+}
+
+.button-message {
+    width: 50px;
+    height: 50px;
 }
 
 .avatar {
@@ -37,37 +58,18 @@ html {
 
 
 .header {
-
-    height: 72px;
-
+    max-height: 72px;
     border-radius: 1rem 0 0 0;
 
-    &-link {
-        padding: 0;
-
-        span {
-            font-size: 0.875rem;
-        }
-    }
-
     &-logo {
-        width: 15px;
+        width: 25px;
         height: 25px;
-
-        padding-bottom: 4px;
+        // margin-right: 38px;
     }
 
     &-chat {
         pointer-events: none;
     }
-}
-
-.navbar-brand {
-    padding-left: 5px;
-}
-
-.nav-item {
-    margin-right: 1.625rem;
 }
 
 .icon {
@@ -77,7 +79,7 @@ html {
     margin-right: 8px;
 
     use {
-         fill: $white;
+        fill: $white;
     }
 }
 
@@ -137,13 +139,12 @@ html {
 .hello-section {
     display: flex;
 
+    padding-top: 11px;
+
     .hello-img {
         width: 200px;
         height: 200px;
         margin-bottom: 1.125rem;
-    }
-    p {
-        font-size: 0,875rem;
     }
 }
 
@@ -153,12 +154,10 @@ html {
 
 //test
 
-.row {
-    border-radius: 1rem;
-}
-
-.left-sidebar {
-    overflow: hidden;
+.contacts,
+.profile,
+.chats {
+    @include hide-scrollbar;
 }
 
 
@@ -175,9 +174,9 @@ html {
             column-gap: 2.5rem;
         }
 
-        span {
-            display: none;
-        }
+        // span {
+        //     display: none;
+        // }
     }
 
     .hello-section {
@@ -185,26 +184,42 @@ html {
     }
 }
 
-@media screen and(max-width: 991.98px) {
-    .header {
-        span {
-            display: none;
-        }
-    }
-}
+// @media screen and(max-width: 991.98px) {
+//     .header {
+//         span {
+//             display: none;
+//         }
+//     }
+// }
 
-@media screen and(max-width: 1199.98px) {
-    .header {
-        span {
-            display: none;
-        }
-    }
-}
+// @media screen and(max-width: 1199.98px) {
+//     .header {
+//         span {
+//             display: none;
+//         }
+//     }
+// }
+
+// @media screen and(max-width: 1339.98px) {
+//     .header {
+//         span {
+//             display: none;
+//         }
+//     }
+// }
 
 @media screen and(max-width: 1339.98px) {
     .header {
         span {
             display: none;
+        }
+    }
+}
+
+@media screen and(min-width: 1339.98px) and (max-width: 1404px) {
+    .header {
+        &-logo {
+            margin-right: 1rem;
         }
     }
 }

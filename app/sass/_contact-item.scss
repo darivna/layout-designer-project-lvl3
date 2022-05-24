@@ -30,12 +30,13 @@
     }  
 }
 
+.chat-item:hover {
+    background-color: $primary;
+}
+
 .chat-body {
-    padding-right: 2.5rem;
-
-    .time {
-        justify-content: end;
-
-        font-size: 0.875rem;
-    }
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

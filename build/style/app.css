@@ -44,20 +44,39 @@
   color: #EFEFEF;
 }
 
-.chat-body {
-  padding-right: 2.5rem;
+.chat-item:hover {
+  background-color: #4545A5;
 }
-.chat-body .time {
-  justify-content: end;
-  font-size: 0.875rem;
+
+.chat-body {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 html {
   font-size: 1rem;
 }
 
-.app-container {
-  max-width: 1540px;
+.row {
+  border-radius: 1rem;
+}
+
+.message {
+  min-width: min-content;
+  max-width: 624px;
+}
+.message-body {
+  border-radius: 1rem;
+}
+.message-text {
+  margin-bottom: 13px;
+}
+
+.button-message {
+  width: 50px;
+  height: 50px;
 }
 
 .message {
@@ -81,30 +100,15 @@ html {
 }
 
 .header {
-  height: 72px;
+  max-height: 72px;
   border-radius: 1rem 0 0 0;
 }
-.header-link {
-  padding: 0;
-}
-.header-link span {
-  font-size: 0.875rem;
-}
 .header-logo {
-  width: 15px;
+  width: 25px;
   height: 25px;
-  padding-bottom: 4px;
 }
 .header-chat {
   pointer-events: none;
-}
-
-.navbar-brand {
-  padding-left: 5px;
-}
-
-.nav-item {
-  margin-right: 1.625rem;
 }
 
 .icon {
@@ -160,22 +164,26 @@ html {
 
 .hello-section {
   display: flex;
+  padding-top: 11px;
 }
 .hello-section .hello-img {
   width: 200px;
   height: 200px;
   margin-bottom: 1.125rem;
 }
-.hello-section p {
-  font-size: 0, 875rem;
-}
 
-.row {
-  border-radius: 1rem;
+.contacts,
+.profile,
+.chats {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-
-.left-sidebar {
-  overflow: hidden;
+.contacts::-webkit-scrollbar,
+.profile::-webkit-scrollbar,
+.chats::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (max-width: 767.7px) {
@@ -189,6 +197,12 @@ html {
   .header .navbar-nav {
     column-gap: 2.5rem;
   }
+
+  .hello-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 1339.98px) {
   .header span {
     display: none;
   }
@@ -210,6 +224,11 @@ html {
 @media screen and (max-width: 1339.98px) {
   .header span {
     display: none;
+  }
+}
+@media screen and (min-width: 1339.98px) and (max-width: 1404px) {
+  .header-logo {
+    margin-right: 1rem;
   }
 }
 /*!
