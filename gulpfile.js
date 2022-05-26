@@ -1,7 +1,6 @@
 const { src, dest, watch, parallel, series } = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const pugs = require("gulp-pug");
-// const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 const svgSprite = require("gulp-svg-sprite");
 
@@ -13,7 +12,6 @@ function browsersync() {
         }
     });
 }
-
 
 function svgsprite() {
     return src("app/assets/images/icons/*.svg")
@@ -33,14 +31,12 @@ function copyImg () {
     .pipe(dest("build/assets"))
 }
 
-
 function styles() {
     return src("app/sass/app.scss")
         .pipe(scss())
         .pipe(dest("build/style"))
         .pipe(browserSync.stream())
 }
-
 
 function pug() {
     return src("app/pug/*.pug")

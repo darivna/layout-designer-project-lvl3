@@ -159,25 +159,19 @@ html {
     }
 
     .header {
-
         border-radius: 0;
 
         .navbar-nav {
             column-gap: 2.5rem;
         }
-    }
 
-    .hello-section {
-        display: none;
-    }
-
-    .current-chat {
-        border-radius: 0;
-        order: 1;
+        span {
+            display: none;
+        }
     }
 }
 
-@media screen and(max-width: 1339.98px) {
+@media screen and(min-width: 767.7px) and (max-width: 1339.98px) {
     .header {
         span {
             display: none;
@@ -185,10 +179,10 @@ html {
     }
 }
 
-@media screen and(min-width: 1339.98px) and (max-width: 1404px) {
-    .header {
-        &-logo {
-            margin-right: 1rem;
+@media screen and(min-width: 767.7px) {
+    .left {
+        .current-chat {
+            display: none;
         }
     }
 }

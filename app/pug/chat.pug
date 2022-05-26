@@ -1,3 +1,5 @@
+- var currentSection = "chat";
+
 doctype html
 html.h-100(lang="ru")
     head
@@ -13,11 +15,34 @@ html.h-100(lang="ru")
     body.h-100.p-md-4.bg-body 
         .container-fluid.container-xxl.h-100
             .row.h-100.bg-white 
-                .col.col-md-4.h-100.tab-content.px-0.d-flex.flex-column.flex-column-reverse.flex-md-column.border-right.border-gray
-                    include sections/header.pug
-                    include sections/contacts.pug
-                    include sections/chats-preview.pug
-                    include sections/profile.pug
+                .left.col.col-md-4.h-100.tab-content.px-0.d-flex.flex-column.flex-column-reverse.flex-md-column.border-right.border-gray.overflow-hidden
 
-                .col.h-100.d-flex.p-0
-                    include sections/current-chat.pug
+                    include sections/header.pug
+
+                    if currentSection == "welcome"
+                        #contacts(class="tab-pane active h-100 overflow-hidden" role="tabpanel" aria-labelledby="contacts-tab")
+                            include sections/contacts.pug
+                        #chats(class="tab-pane fade h-100 overflow-hidden" role="tabpanel" aria-labelledby="chats-tab")
+                            include sections/chats-preview.pug
+                        #profile(class="tab-pane fade h-100 overflow-hidden" role="tabpanel" aria-labelledby="profile-tab")
+                            include sections/profile.pug
+                        #current-chat(class="tab-pane h-100 overflow-hidden" role="tabpanel" aria-labelledby="current-chat-tab")
+                            include sections/current-chat.pug
+                        
+                    
+                    if currentSection == "chat"
+                        #contacts(class="tab-pane fade h-100 overflow-hidden" role="tabpanel" aria-labelledby="contacts-tab")
+                            include sections/contacts.pug
+                        #chats(class="tab-pane active h-100 overflow-hidden" role="tabpanel" aria-labelledby="chats-tab")
+                            include sections/chats-preview.pug
+                        #profile(class="tab-pane fade h-100 overflow-hidden" role="tabpanel" aria-labelledby="profile-tab")
+                            include sections/profile.pug
+                        #current-chat(class="tab-pane fade h-100 overflow-hidden" role="tabpanel" aria-labelledby="current-chat-tab")
+                            include sections/current-chat.pug
+                
+                .right.col.h-100.p-0.d-none.d-md-block
+                    if currentSection == "welcome"
+                        include sections/welcome.pug
+
+                    if currentSection == "chat"
+                        include sections/current-chat.pug
